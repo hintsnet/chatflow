@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang='zh'>
   <head>
-    <title>ChatFlow</title>
+    <title>ChatFlow Converter | 对话泡泡转换器</title>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href='dist/css/ui.css' rel='stylesheet'>
   </head>
-  <body>
-    <div class='col'>
-      <div class='panel chatbox' data-yaml='yaml/test.yaml'></div>
+  <body style="display:-webkit-flex;flex-direction:column;">
+    <div id='chatbbl' style="flex:1;" class='panel chatbox' data-yaml='yaml/test.yaml'></div>
+    <div style="flex:1;background-color:rgb(252,224,131);margin:20px;padding:10px;float:left;">
+      <textarea id='manual_input' style="min-width:94%;height:240px;margin:10px;border-radius:5px;">
+A:
+一切皆有可能!
+
+B:
+Impossible is Nothing!
+
+C:
+只管去做~
+动起手来!
+
+D:
+Just Do It~
+Keep Your Hands Dirty!
+      </textarea><br/>
+      <center>
+        <button id="replay_btn">回放聊天记录</button>
+        <button id="share_btn">生成分享链接</button>
+      </center>
+    </div>
+    <div style="background-color:rgba(255,255,255,0.1);text-align:center;">
+      <p>项目源码 - <a href="https://github.com/hintsnet/chatflow">hintsnet/chatflow on GitHub</a></p>
+      <p>头像图片来源 - <a rel="nofollow" href="https://www.vecteezy.com">Vector illustration credit: www.vecteezy.com</a></p>
     </div>
     <script src='lib/js-yaml.js' type='text/javascript'></script>
+    <script src='lib/lz-string.min.js' type='text/javascript'></script>
     <script src='lib/jquery-2.1.1.min.js' type='text/javascript'></script>
     <script src='dist/js/plugins/jquery.typing-string.js' type='text/javascript'></script>
     <script src='dist/js/game/utils.js' type='text/javascript'></script>
@@ -21,6 +45,7 @@
     <script src='dist/js/game/chat_sentence.js' type='text/javascript'></script>
     <script src='dist/js/game/chatpop.js' type='text/javascript'></script>
     <script src='dist/js/game/questionpop.js' type='text/javascript'></script>
+    <script src='dist/js/conv.js' type='text/javascript'></script>
     <script src='dist/js/ui.js' type='text/javascript'></script>
   </body>
 </html>
